@@ -16,6 +16,7 @@ rabbitmq_vhost:
   cmd:
     - wait
     - name: rabbitmqctl add_vhost {{ salt['pillar.get']('sensu:rabbitmq:vhost', '/sensu') }}
+    - watch:
       - file: rabbitmq.json
 
 rabbitmq_permissions:
