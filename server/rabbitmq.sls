@@ -9,11 +9,14 @@ rabbitmq_user:
   cmd:
     - wait
     - name: rabbitmqctl add_user {{ salt['pillar.get']('sensu:rabbitmq:user', 'sensu') }} {{ salt['pillar.get']('sensu:rabbitmq:password' , 'sensu') }}
+    - watch:
+      - file: rabbitmq.json
 
 rabbitmq_vhost:
   cmd:
     - wait
     - name: rabbitmqctl add_vhost {{ salt['pillar.get']('sensu:rabbitmq:vhost', '/sensu') }}
+      - file: rabbitmq.json
 
 rabbitmq_permissions:
   cmd:
