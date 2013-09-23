@@ -18,7 +18,7 @@ sensu-client:
     - template: jinja
     - context:
       nodename: {{ salt['grains.item']('nodename')['nodename'] }}
-      ip: {{ salt['network.interfaces']()['eth1']['inet'][0]['address']}}
+      ip: {{ salt['network.interfaces']()['eth0']['inet'][0]['address']}}
 
 rabbitmq.json:
   file:
