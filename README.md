@@ -19,5 +19,3 @@ To set configuration data, use the pillar file.
 ### Sensu server ###
     include:
       - sensu.server
-
-
