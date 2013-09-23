@@ -12,9 +12,6 @@ sensu-client:
     - managed
     - name: /etc/sensu/conf.d/client.json
     - source: salt://sensu/client/client.json
-    - mode: 644
-    - user: root
-    - group: root
     - template: jinja
     - context:
       nodename: {{ salt['grains.item']('nodename')['nodename'] }}
