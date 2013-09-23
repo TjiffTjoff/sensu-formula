@@ -13,9 +13,7 @@ The client setup is also assumes that eth0 is the primary NIC.
 To set configuration data, use the pillar file.
 
 ### Sensu server ###
-    include:
-      - sensu.client
+    salt <minion id> state.sls sensu.client
 
 ### Sensu server ###
-    include:
-      - sensu.server
+    salt <minion id> state.sls sensu.server
