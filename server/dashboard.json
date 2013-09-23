@@ -1,0 +1,8 @@
+{
+  "dashboard": {
+    "host": "localhost",
+    "port": {{ salt['pillar.get']('sensu:dashboard:port', 8080) }},
+    "user": "{{ salt['pillar.get']('sensu:dashboard:user', 'sensu') }}",
+    "password": "{{ salt['pillar.get']('sensu:dashboard:password', 'secret') }}"
+  }
+}

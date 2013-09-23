@@ -1,0 +1,9 @@
+{
+  "rabbitmq": {
+    "port": {{ salt['pillar.get']('sensu:rabbitmq:port', 5672) }},
+    "host": "{{ salt['pillar.get']('sensu:rabbitmq:host', 'localhost') }}",
+    "user": "{{ salt['pillar.get']('sensu:rabbitmq:user', 'sensu') }}",
+    "password": "{{ salt['pillar.get']('sensu:rabbitmq:password', 'sensu') }}",
+    "vhost": "{{ salt['pillar.get']('sensu:rabbitmq:port', '/sensu') }}"
+  }
+}

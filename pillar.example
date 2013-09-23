@@ -1,0 +1,14 @@
+sensu:
+  rabbitmq:
+    host: 192.168.1.1
+    user: sensu
+    password: sensu
+    vhost: /sensu
+  redis:
+    host: 192.168.1.1  
+  api:
+    port: 4567
+  dashboard:
+    port: 8080
+    user: sensu
+    password: sensu

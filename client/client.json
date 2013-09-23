@@ -1,0 +1,7 @@
+{
+  "client": {
+    "name": "{{ nodename }}",
+    "address": "{{ ip }}",
+    "subscriptions": [ "all" ]
+  }
+}

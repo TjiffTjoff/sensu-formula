@@ -1,0 +1,7 @@
+
+{     
+  "redis": {
+    "host": "{{ salt['pillar.get']('sensu:redis:host', 'localhost') }}",
+    "port": {{ salt['pillar.get']('sensu:redis:port', 6379) }}
+  }
+}
